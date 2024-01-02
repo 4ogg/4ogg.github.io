@@ -117,15 +117,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) { /* Adjust the max-width as needed for your design */
-    .post-header {
-        position: static; /* Default position to scroll with the page */
-    }
-
+/* Hide elements on screens that are 768px wide or less */
+@media only screen and (max-width: 768px) {
+    .audio-player,
     .back-button {
-        position: relative; /* Position at the document flow end */
-        bottom: auto;
-        left: auto;
+        display: none;
     }
 }
