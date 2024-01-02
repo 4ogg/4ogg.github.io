@@ -1,0 +1,118 @@
+/* static/styles.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #181818; /* Dark background color */
+    color: #ffffff; /* White text color */
+	font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack links vertically */
+}
+
+a {
+    color: #ffffff; /* White text color for links */
+    font-size: 36px; /* Large font size for visibility */
+    text-decoration: none; /* No underlining for links */
+    margin: 10px 0; /* Spacing between links */
+}
+
+a:hover {
+    text-decoration: none; /* No underlining for clean look */
+}
+
+.post-header {
+    position: sticky;
+    top: 0;
+    background: #181818;
+    padding: 10px;
+    z-index: 10;
+}
+
+.post-content {
+    max-height: 80vh; /* 80% of the viewport height */
+    overflow-y: auto; /* Enable scrolling for overflow content */
+    max-width: 800px; /* Sets the maximum width of the post content for readability */
+    margin: 0 auto; /* Centers the post content */
+    padding: 20px; /* Adds some padding around the text */
+    line-height: 1.6; /* Improves readability by increasing line height */
+    word-wrap: break-word; /* Prevents text from overflowing */
+    margin-top: 20px;
+}
+
+/* If you want to add a title style as well */
+.post-title {
+    font-size: 2em; /* Larger text for the post title */
+    margin-top: 20px; /* Adds space above the post title */
+    margin-bottom: 20px; /* Adds space below the post title */
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px; /* Adjust size as needed */
+    background: transparent;
+}
+
+.back-button a:hover {
+    text-decoration: underline;
+}
+
+.audio-player {
+    width: 100%;
+    max-width: 800px; /* Match the width of your post content for consistency */
+    margin: 20px auto; /* Center the player */
+}
+
+.persistent-message {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: #959595;
+  font-size: 18px;
+}
+
+.persistent-message img {
+    height: 1em; /* Sets the emoji height to match the current font size */
+    width: auto; /* Maintains the aspect ratio of the emoji */
+    vertical-align: -0.2em; /* Aligns the emoji with the text */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.post-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.post-content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Apply styles to all 'a' elements */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 0;
+    /* Do not set font-size here if you want it to inherit from the parent */
+}
+
+/* Apply styles specifically to hyperlinks within your text content */
+.post-content a {
+    font-size: inherit; /* This will make the font size the same as the surrounding text */
+}
+
+/* Apply hover effect for all 'a' elements */
+a:hover {
+    text-decoration: underline;
+}
