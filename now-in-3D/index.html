@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>normie.lol</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+	
+</head>
+<body>
+    <div class="audio-player">
+        <audio controls>
+            <source src="/audio/now-in-3d.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="post-content">
+    <h1>Now in 3D</h1>
+    <p>
+	I’ve talked a lot about using AI to generate movies. You might suspect this is due to me having some incredible backlog of films rattling around in my head, just waiting to be born onto the screen. While I might have an idea or two, this is not the primary reason I find myself excited for AI generated movies. In truth, I see the mastery of video as a much larger accomplishment than most people tend to understand – even among my techier friends. In order to create an entire Hollywood-tier feature film from scratch, these models will a far deeper understanding of the world than they currently have.
+	</br>
+	</br>
+	What do I mean by this? Can’t you just stack more layers? The video models of today (January, 2024) are very simple in their construction – working almost identically to image models. Where an image model uses an image dataset to learn what a sunset is, or what makes a woman look different from a man, video models use large datasets of videos in much the same way. However, instead of simply learning what an object is, the video model then also has to learn how that object generally moves.
+	</br>
+	</br>	
+	For example, it might look at a few thousand videos of a sunset and discover that the big red ball tends to move down toward the bottom of the screen. Repeat this process enough times and you get a model that has a general understanding of how most things move. Unfortunately, this lands you with a blurry understanding that averages all the movement together. If you have a thousand videos of people looking into the camera and idly shifting side to side while occasionally blinking, that’s going to be how the model thinks people-shaped things tend to move. It doesn’t matter if you’ve got a few dozen videos of people jumping up and down or flailing their arms around, those are aberrant behaviors that are blurred away by the general understanding.
+	</br>
+	</br>	
+	All of this to say that the “pan and zoom” video models we have today, such as Gen-2 and Stable Video, are disappointing for a reason – they’ve been made incorrectly. Every attempt at video generation so far has been a hacky solution that crosses its fingers and prays to find fertile ground. Applying the methods used to make today’s image models simply won’t (likely) be enough to solve this problem. Obviously, I can’t be sure of this. It’s entirely possible that if you just keep increasing the dataset and stacking more layers, you end up with a video model that understands motion and depth perfectly. I doubt this will be the case, but it’s possible.
+	</br>
+	</br>	
+	Instead, I believe the video models of the next few years will be fundamentally distinct in their construction. Where the current models are based off of image generation, it seems obvious to me that the models of tomorrow will have their roots firmly in 3D generation. Now, I don’t mean that you’re going to prompt the model and get a bunch of OBJ files that you have to puppet around in Blender. (There are <a href="https://stability.ai/news/stable-zero123-3d-generation" target="_blank">already models</a> that are working on that specific niche, and they’re showing real promise.) What I mean is that the processes used to construct 3D models, namely a foundational understanding of shape, depth, and position in a physical space, will end up being what leads to perfect video models.
+	</br>
+	</br>	
+	Ask yourself this question: How are you able to close your eyes and still interact with the world around you? How can you touch your nose without being able to see it? If you’re familiar enough with your house, you might even be able to safely walk through it without opening your eyes. People who are born blind are able to interact with the world, despite never having once seen it. This is all due to our ability to understand shape, depth, and our position in a physical space. This is why films that break the boundaries of our three-dimensional world immediately stick out to us. If a room is one way in one scene and then entirely different in the next scene, we pick up on that and understand that it is either not the same room or some set designer got lazy. Either way, we notice the incongruency. If a person’s eyes change color from shot to shot, or if they seemingly walk under half the gravity as everyone around them, it distracts us and breaks our immersion. Nobody has to tell you that these things look weird, you just understand that they belong solidly in the realm of Things That Cannot Happen. I’m not sure if there’s a term for the 3D equivalent of the uncanny valley, but it would be most appropriate here.
+	</br>
+	</br>	
+	Clearly, in order for the “video problem” to be entirely solved, the aforementioned conditions will have to be met. Our senses will need to be fooled into believing that what we’re looking at is real. At the moment, we seem to almost be there with photos. The average person, with no warning and without spending multiple minutes investigating, would probably be able to realize they were looking at an AI photo (provided it was a well-made “photorealistic” image, like the ones so easily produced by Midjourney) about five percent of the time. Even then, their level of confidence might not be terribly high. This will eventually drop to zero percent, even among those individuals who fancy themselves uniquely able to detect AI images, like myself. The human brain will simply not be powerful enough to tell the difference.
+	</br>
+	</br>	
+	To get to that same point with video, it’s going to require a lot more than a blurry understanding of how things tend to move. The perfect video model will not only have a visual understanding of the world, but it will also have a dimensional understanding. The same technology being developed today to create game assets will soon be integrated into the video pipeline. Our models will create a 3D world inside themselves and simply move us around in it. For example, if you wanted to make a Harry Potter movie, it might generate a 3D Hogwarts castle and use that for scene-to-scene reference. Of course, it would also need to do that for every single character and item in the movie. This will quickly become a very computationally heavy process, requiring incredible amounts of memory. On top of all of this, the model will also have to understand physics such that nobody starts glitching like a Source engine character.
+	</br>
+	</br>	
+	Which actually brings me to my final point. It’s possible that video models end up representing current-day video game engines far more than they will Stable Diffusion. A lot of the same processes and math are going to need to occur under the hood, so who knows what it ends up looking like? All I know for sure is that, one day soon, we’re going to look back and laugh at how simple we assumed movies were going to be. Maybe someone will make a movie about it.
+	</br>
+	</br>	
+	(The more cunning reader might have already realized what this all implies about where the technology evolves past solving the “video problem”, but we’ll leave the Holodeck for another post.)
+	</br>
+	</br>
+	<i>1/4/2024</i>
+</p>
+
+	</body>
+</html>
