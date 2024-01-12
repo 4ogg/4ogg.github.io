@@ -125,6 +125,27 @@ a:hover {
     }
 }
 
+.image-container {
+    position: relative;
+    text-align: center; /* Center the image */
+}
+
+#gallery-image {
+    max-width: 50%; /* Adjust as needed */
+    max-height: 50%; /* Adjust as needed */
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 10px; /* Adds space below the image */
+}
+
+#image-title {
+    font-weight: bold; /* Makes title bold */
+}
+
+#image-description {
+    font-style: italic; /* Makes description italicized */
+}
+
 .gallery {
     text-align: center;
 }
@@ -153,4 +174,39 @@ a:hover {
 #prev, #next {
     margin: 10px;
     padding: 5px 10px;
+}
+
+#prev, #next {
+    padding: 10px 15px;
+    color: #fff; /* Button text color */
+    background-color: #007bff; /* Button background color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    margin: 10px;
+}
+
+#prev:hover, #next:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Additional styles for button positioning if needed */
+.gallery {
+    position: relative;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
 }
