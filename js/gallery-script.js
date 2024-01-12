@@ -42,6 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
     imageElement.addEventListener('click', function() {
         imageElement.classList.toggle('enlarged');
     });
+	
+	    imageElement.addEventListener('click', function() {
+        imageElement.classList.toggle('enlarged');
+        document.querySelector('.image-info').classList.toggle('hide');
+        document.getElementById('prev').classList.toggle('hide');
+        document.getElementById('next').classList.toggle('hide');
+    });
 
     updateImage(currentIndex); // Initialize gallery
 });

@@ -136,8 +136,8 @@ a:hover {
 }
 
 #gallery-image {
-    max-width: 50%; /* Initial max width, adjust as needed */
-    max-height: 50%; /* Initial max height, adjust as needed */
+    max-width: 40%; /* Initial max width, adjust as needed */
+    max-height: 40%; /* Initial max height, adjust as needed */
     height: auto;
     cursor: pointer;
     margin-bottom: 10px; /* Adds space below the image */
@@ -161,7 +161,7 @@ a:hover {
 #prev, #next {
     padding: 10px 15px;
     color: #fff; /* Button text color */
-    background-color: #007bff; /* Button background color */
+    background-color: #151515; /* Button background color */
     border: none;
     border-radius: 5px; /* Rounded corners */
     font-size: 16px;
@@ -182,5 +182,9 @@ a:hover {
 }
 
 #prev:hover, #next:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0d0d0d; /* Darker shade on hover */
+}
+
+.hide {
+    display: none;
 }
