@@ -136,26 +136,9 @@ a:hover {
 }
 
 #gallery-image {
-    max-width: 40%; /* Initial max width, adjust as needed */
-    max-height: 40%; /* Initial max height, adjust as needed */
+    max-width: 40%;
     height: auto;
-    cursor: pointer;
     margin-bottom: 10px; /* Adds space below the image */
-    transition: transform 0.3s ease; /* Smooth transition for enlarging */
-}
-
-/* Enlarged image style */
-.enlarged {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.8); /* Optional: dark semi-transparent background */
-    cursor: zoom-out; /* Change cursor to indicate the image can be minimized */
-    transition: transform 0.3s ease; /* Smooth transition for enlarging */
 }
 
 #image-title {

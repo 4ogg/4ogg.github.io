@@ -25,12 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
         descElement.textContent = images[index].desc;
     }
 
-    document.getElementById('prev').addEventListener('click', function() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateImage(currentIndex);
-        }
-    });
+	document.getElementById('next').addEventListener('click', function() {
+		currentIndex = (currentIndex + 1) % images.length; // Loop back to first image
+		updateImage(currentIndex);
+	});
+
 
     document.getElementById('next').addEventListener('click', function() {
         if (currentIndex < images.length - 1) {
@@ -52,3 +51,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateImage(currentIndex); // Initialize gallery
 });
+
+
