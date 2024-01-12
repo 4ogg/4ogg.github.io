@@ -124,3 +124,33 @@ a:hover {
         display: none;
     }
 }
+
+.gallery {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+#gallery-image {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Enlarged image style */
+.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 1000;
+}
+
+#prev, #next {
+    margin: 10px;
+    padding: 5px 10px;
+}
