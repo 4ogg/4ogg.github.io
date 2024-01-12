@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
         { 
-            src: 'https://i.ibb.co/njxjrXj/annihilation.png', 
+            src: 'https://i.ibb.co/6P0c0YH/annihilation.png', 
             title: 'Annihilation', 
-            desc: 'I feel it all the time' 
+            desc: 'Got a lot on my mind' 
         },
         { 
             src: 'https://i.ibb.co/jDYdbtj/crown.png', 
             title: 'Crown', 
-            desc: 'Closing my eyes until the threat is gone' 
+            desc: 'Time is a flat circle' 
         },
         // Add more images with URLs as needed
     ];
