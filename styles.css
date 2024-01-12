@@ -125,17 +125,29 @@ a:hover {
     }
 }
 
+.gallery {
+    text-align: center;
+    position: relative;
+}
+
 .image-container {
     position: relative;
     text-align: center; /* Center the image */
 }
 
 #gallery-image {
-    max-width: 50%; /* Adjust as needed */
-    max-height: 50%; /* Adjust as needed */
+    max-width: 50%; /* Initial max width, adjust as needed */
+    max-height: 400px; /* Initial max height, adjust as needed */
     height: auto;
     cursor: pointer;
     margin-bottom: 10px; /* Adds space below the image */
+    transition: transform 0.3s ease; /* Smooth transition for enlarging */
+}
+
+/* Enlarged image style */
+.enlarged {
+    transform: scale(1.5); /* Enlarge the image */
+    transition: transform 0.3s ease; /* Smooth transition for enlarging */
 }
 
 #image-title {
@@ -144,36 +156,6 @@ a:hover {
 
 #image-description {
     font-style: italic; /* Makes description italicized */
-}
-
-.gallery {
-    text-align: center;
-}
-
-.image-container {
-    position: relative;
-}
-
-#gallery-image {
-    max-width: 100%;
-    height: auto;
-    cursor: pointer;
-}
-
-/* Enlarged image style */
-.enlarged {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 90%;
-    max-height: 90%;
-    z-index: 1000;
-}
-
-#prev, #next {
-    margin: 10px;
-    padding: 5px 10px;
 }
 
 #prev, #next {
@@ -186,18 +168,6 @@ a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth background color transition */
     margin: 10px;
-}
-
-#prev:hover, #next:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-
-/* Additional styles for button positioning if needed */
-.gallery {
-    position: relative;
-}
-
-#prev, #next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -209,4 +179,8 @@ a:hover {
 
 #next {
     right: 10px;
+}
+
+#prev:hover, #next:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
