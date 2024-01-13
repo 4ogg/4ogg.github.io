@@ -117,11 +117,41 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Hide elements on screens that are 768px wide or less */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+    /* Hide audio player and back button on mobile */
     .audio-player,
     .back-button {
         display: none;
+    }
+
+    /* Larger images on smaller screens */
+    #gallery-image {
+        max-width: 90%;
+        max-height: auto;
+    }
+
+    /* Position title and description above buttons */
+    .image-info {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    /* Full width, larger buttons for easier touch */
+    #prev, #next {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        margin: 5px 0;
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+    }
+
+    /* Use full width of screen for the gallery */
+    .gallery {
+        width: 100%;
+        padding: 0 10px;
     }
 }
 
@@ -179,3 +209,4 @@ a:hover {
 .hide {
     display: none;
 }
+
