@@ -5,10 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: 'https://i.ibb.co/jDYdbtj/crown.png', title: 'Crown', desc: 'Time is a flat circle' },
         { src: 'https://i.ibb.co/MfRZGPy/shadow.png', title: 'Shadow', desc: 'I got your back' },
         { src: 'https://i.ibb.co/HxmX0Vt/Smoke.png', title: 'Smoke', desc: 'Bad for your health' },
-        { src: 'https://i.ibb.co/GJDDV4x/vision.png', title: 'Vision', desc: 'See no evil' },
-        { src: 'https://i.ibb.co/V26GtZ9/static.png', title: 'Static', desc: 'This guy again?' },
-        { src: 'https://i.ibb.co/DW9bHpM/Entity.png', title: 'Entity', desc: 'Oh, so this is what was in the dark corner' },
         { src: 'https://i.ibb.co/QXtJDvq/Gradient.png', title: 'Gradient', desc: 'Oh, this is a nice change of pace' },
+		{ src: 'https://i.ibb.co/V26GtZ9/static.png', title: 'Static', desc: 'This guy again?' },
+        { src: 'https://i.ibb.co/GJDDV4x/vision.png', title: 'Vision', desc: 'See no evil' },
+        { src: 'https://i.ibb.co/DW9bHpM/Entity.png', title: 'Entity', desc: 'So this is what was in the dark corner' },
+        { src: 'https://i.ibb.co/h744sFy/Restriction.png', title: 'Restriction', desc: 'What did he mean by this?' },		
 		
         // Add more images as needed
     ];
