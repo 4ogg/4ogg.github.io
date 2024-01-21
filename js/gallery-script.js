@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		{ src: 'https://i.ibb.co/V26GtZ9/static.png', title: 'Static', desc: 'This guy again?' },
         { src: 'https://i.ibb.co/GJDDV4x/vision.png', title: 'Vision', desc: 'See no evil' },
         { src: 'https://i.ibb.co/DW9bHpM/Entity.png', title: 'Entity', desc: 'So this is what was in the dark corner' },
-        { src: 'https://i.ibb.co/JshQpVr/Heat.png', title: 'Heat', desc: 'Bet your bottom dollar' },		
+        { src: 'https://i.ibb.co/Q6b2Zxp/Heat.png', title: 'Heat', desc: 'Bet your bottom dollar' },		
 		
         // Add more images as needed
     ];
