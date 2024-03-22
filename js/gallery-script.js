@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: 'https://i.ibb.co/BtNFQJM/Misplaced.png', title: 'Misplaced', desc: 'Dress for the job you want, not the one you have' },
         { src: 'https://i.ibb.co/M2DWLPN/Fracture.png', title: 'Fracture', desc: 'This is why your mom always made you wear sunblock' },
         { src: 'https://i.ibb.co/VJCmgKh/Intent.png', title: 'Intent', desc: 'Who put this here?' },
-        { src: 'https://i.ibb.co/xMjcRMF/Mirror.png', title: 'Mirror', desc: 'No camera in the reflection? Damn AI...' },
         { src: 'https://i.ibb.co/58stXCC/guy.png', title: 'Guy', desc: 'Here comes a robot with electric brains' },
 		
         // Add more images as needed
