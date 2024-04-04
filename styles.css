@@ -211,12 +211,12 @@ a:hover {
 }
 
 ::selection {
-  background: #ffc83d; /* This sets the background color of your selection */
-  color: #000000; /* This sets the text color of your selection */
+  background: #ffffff; /* This sets the background color of your selection */
+  color: #181818; /* This sets the text color of your selection */
 }
 
 /* For browser compatibility, you might also want to include */
 ::-moz-selection {
-  background: #ffc83d;
-  color: #000000;
+  background: #ffffff;
+  color: #181818;
 }
