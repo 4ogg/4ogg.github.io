@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Ghost-Echo Motion</title>
+<style>
+  body { margin: 0; font-family: sans-serif; background:#111; color:#eee; }
+  canvas { display:block; max-width:100vw; max-height:80vh; }
+  .controls {
+    padding: .5rem 1rem;
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+  }
+  label { font-size:.9rem; }
+  input[type=range] { vertical-align:middle; width:90px; }
+</style>
+</head>
+<body>
+<canvas id="out"></canvas>
+<div class="controls">
+  <label>Delay&nbsp;<input id="delay" type="range" min="0" max="10" value="3"></label>
+  <label>Blend %&nbsp;<input id="blend" type="range" min="0" max="100" value="50"></label>
+  <label>Boost&nbsp;<input id="boost" type="range" min="1" max="10" value="4" step="0.1"></label>
+  <label>Floor&nbsp;<input id="floor" type="range" min="0" max="15" value="6"></label>
+</div>
+
+<script>
+const out   = document.getElementById('out');
+const ctx   = out.getContext('2d');
+
+const slDelay = document.getElementById('delay');
+const slBlend = document.getElementById('blend');
+const slBoost = document.getElementById('boost');
+const slFloor = document.getElementById('floor');
+
+const buffer = [];             // holds past greyscale frames
+let w, h;                      // canvas size
+
+// ---- helpers ----
+function toGray(src, dst) {
+  const d = src.data;
+  for (let i = 0, j = 0; i < d.length; i += 4, j++) {
+    dst[j] = 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
+  }
+}
+
+// ---- main loop ----
+async function start() {
+  const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 1280, height: 720 } });
+  const vid = document.createElement('video');
+  vid.srcObject = stream;
+  vid.playsInline = true;
+  vid.muted = true;
+  await vid.play();
+
+  // set canvas to camera resolution
+  w = vid.videoWidth;
+  h = vid.videoHeight;
+  out.width  = w;
+  out.height = h;
+
+  const tmp     = ctx.createImageData(w, h);   // RGBA canvas buffer
+  const gray0   = new Uint8Array(w * h);       // current grey
+  const gray1   = new Uint8Array(w * h);       // previous grey
+  const diff    = new Uint8Array(w * h);       // difference
+  const mask    = new Uint8Array(w * h);       // binary mask
+
+  // scratch canvas for ImageData
+  const work = document.createElement('canvas');
+  work.width  = w;
+  work.height = h;
+  const wCtx = work.getContext('2d');
+
+  function draw() {
+    // 1. grab frame
+    wCtx.drawImage(vid, 0, 0, w, h);
+    const img = wCtx.getImageData(0, 0, w, h);
+
+    // 2. convert to grey
+    toGray(img, gray0);
+
+    // 3. manage buffer
+    buffer.push(gray0.slice());
+    if (buffer.length > slDelay.valueAsNumber + 1) buffer.shift();
+
+    // 4. compute mask
+    if (buffer.length > slDelay.valueAsNumber && slDelay.valueAsNumber > 0) {
+      const old = buffer[0];
+      const boost = slBoost.valueAsNumber;
+      const floor = slFloor.valueAsNumber;
+      for (let i = 0; i < gray0.length; i++) {
+        const d = Math.abs(gray0[i] - old[i]) * boost;
+        diff[i] = d > 255 ? 255 : d;
+        mask[i] = diff[i] > floor ? 255 : 0;
+      }
+    } else {
+      mask.fill(0);
+    }
+
+    // 5. composite
+    const blend = slBlend.valueAsNumber / 100;
+    const data = tmp.data;
+    for (let i = 0, j = 0; i < data.length; i += 4, j++) {
+      const g = gray0[j];
+      const m = mask[j];
+      if (m) {
+        data[i]   = 0;          // R
+        data[i+1] = 255;        // G
+        data[i+2] = 0;          // B
+        data[i+3] = 255 * blend;
+      } else {
+        data[i]   = g;
+        data[i+1] = g;
+        data[i+2] = g;
+        data[i+3] = 255 * (1 - blend);
+      }
+    }
+    ctx.putImageData(tmp, 0, 0);
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+start().catch(console.error);
+</script>
+</body>
+</html>
